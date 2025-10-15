@@ -4,6 +4,7 @@ import { contactInfo } from '@/config/contact';
 export const Footer: React.FC = () => {
   const instagramUrl = contactInfo.instagram;
   const youtubeUrl = contactInfo.youtube || 'https://youtube.com';
+  const base = import.meta.env.BASE_URL || '/';
 
   return (
     <footer className="site-footer">
@@ -31,11 +32,11 @@ export const Footer: React.FC = () => {
         <div className="site-footer__logoWrap" aria-label="Marca">
           <img
             className="site-footer__logo"
-            src="/loguito.png"
+            src={`${base}loguito.png`}
             alt="Figueroa Trainer"
             width={160}
             height={60}
-            onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/logo.png'; }}
+            onError={(e) => { (e.currentTarget as HTMLImageElement).src = `${base}logo.png`; }}
             loading="lazy"
           />
         </div>

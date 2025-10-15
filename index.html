@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Figueroa Trainer</title>
     <meta name="description" content="Entrenador personal - mejora tu salud y rendimiento." />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
+  <!-- Exponer la base URL como variable CSS para que las hojas de estilo puedan resolver assets en `public/` -->
+  <script>document.documentElement.style.setProperty('--base-url', '%BASE_URL%');</script>
   </head>
   <body>
     <div id="root"></div>

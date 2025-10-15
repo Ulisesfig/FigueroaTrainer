@@ -10,7 +10,8 @@ const features = [
 ];
 
 export const Home: React.FC = () => {
-  const slides = ['/hero.png', '/hero-2.png', '/hero-3.png', '/hero-4.png'];
+  const base = import.meta.env.BASE_URL || '/';
+  const slides = [`${base}hero.png`, `${base}hero-2.png`, `${base}hero-3.png`, `${base}hero-4.png`];
   const [slideIndex, setSlideIndex] = useState(0);
 
   useEffect(() => {

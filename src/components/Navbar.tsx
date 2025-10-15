@@ -31,12 +31,14 @@ export const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handle);
   }, []);
 
+  const base = import.meta.env.BASE_URL || '/';
+
   return (
     <nav className={scrolled ? 'nav nav--scrolled' : 'nav'}>
       <div className="container nav__inner">
         <Link to="/" className="nav__brand" aria-label="Figueroa Trainer - inicio">
           <img
-            src="/logo.png"
+            src={`${base}logo.png`}
             alt="Figueroa Trainer"
             className="nav__logo"
             height={90}
