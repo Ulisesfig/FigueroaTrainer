@@ -10,7 +10,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 export default defineConfig({
   // Ajustá esta base a tu repo si desplegás en GitHub Pages
   // Ej: https://ulisesfig.github.io/FigueroaTrainer/ => base: '/FigueroaTrainer/'
-  base: '/FigueroaTrainer/',
+  base: '/',
   plugins: [
     react(),
     {
