@@ -1,5 +1,6 @@
 import React from 'react';
 import { plans } from '@/config/plans';
+import { Link } from 'react-router-dom';
 
 export const Planes: React.FC = () => {
   return (
@@ -26,7 +27,7 @@ export const Planes: React.FC = () => {
             </ul>
             <div style={{ marginTop: 'auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '.75rem' }}>
               <strong style={{ color: 'var(--color-primary-accent)' }}>{plan.price}</strong>
-              <a className="primary-btn" href={`/planes/${plan.slug}`} style={{ padding: '.6rem 1rem', fontSize: '.95rem' }}>Ver detalle</a>
+              <Link className="primary-btn" to={`/planes/${plan.slug}`} style={{ padding: '.6rem 1rem', fontSize: '.95rem' }}>Ver detalle</Link>
             </div>
           </article>
         ))}

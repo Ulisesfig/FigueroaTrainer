@@ -5,4 +5,4 @@ import App from './App';
 const rootElement = document.getElementById('root');
 if (!rootElement)
     throw new Error('Root element #root no encontrado');
-createRoot(rootElement).render(_jsx(BrowserRouter, { children: _jsx(App, {}) }));
+createRoot(rootElement).render(_jsx(BrowserRouter, { basename: import.meta.env.BASE_URL, children: _jsx(App, {}) }));
